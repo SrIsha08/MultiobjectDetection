@@ -1,4 +1,4 @@
-# OBJECT_DETECTION
+# Multi_OBJECT_DETECTION
 Using deep learning YOLOv3 algorithm object detection is performed in Real time using OpenCV .
 coco.names : It contains 80 different class names used in dataset that the algorithm is trained.
 yolov3.cfg: The file contains the network configuration.
