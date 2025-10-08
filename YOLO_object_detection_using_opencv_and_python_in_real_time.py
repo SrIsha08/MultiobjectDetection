@@ -1,10 +1,5 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-"""
-Created on Sat Mar  4 23:29:31 2020
-
-@author: hrithik
-"""
 
 
 import cv2
@@ -14,9 +9,9 @@ import numpy as np
 #load yolo
 
 font=cv2.FONT_HERSHEY_PLAIN
-net=cv2.dnn.readNet("/home/hrithik/Desktop/YOLO/yolov3.weights","/home/hrithik/Desktop/YOLO/yolov3.cfg")
+net=cv2.dnn.readNet("/home/isha/Desktop/YOLO/yolov3.weights","/home/isha/Desktop/YOLO/yolov3.cfg")
 classes=[]
-with open("/home/hrithik/Desktop/YOLO/coco.names","r") as f: classes=[line.strip() for line in f.readlines()]
+with open("/home/isha/Desktop/YOLO/coco.names","r") as f: classes=[line.strip() for line in f.readlines()]
 
 layer_names = net.getLayerNames()
 output_layers = [layer_names[i[0]-1] for i in net.getUnconnectedOutLayers()]
@@ -28,7 +23,7 @@ cap=cv2.VideoCapture(0)
 
 while True:
     _,frame=cap.read()
-#img=cv2.imread("/home/hrithik/Desktop/test.jpg")
+#img=cv2.imread("/home/isha/Desktop/test.jpg")
 #to resize the image
 #img=cv2.resize(img,None,fx=0.4,fy=0.4)
     #height,width,channels=img.shape
